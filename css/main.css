@@ -169,14 +169,26 @@ footer .quote{
 }
 
 @media print {
-    .cover{
-        display: none;
-    }
       body {
-    background: yourBackground;
+    margin: 0;
+    padding: 0;
+    width: 210mm; /* A4 width */
+    height: 297mm; /* A4 height */
+    overflow: hidden;
+        background: yourBackground;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+
+  html {
+    width: 210mm;
+    height: 297mm;
+        font-size: 16px;
+  }
+    .cover{
+        display: none;
+    }
+
     .container{
         display: flex;
         width: 100%;
@@ -186,9 +198,7 @@ footer .quote{
     size: A4 portrait;
     margin: 0;
   }
-  html{
-    font-size: 16px;
-  }
+
 
 }
 @media (max-width:990px){
